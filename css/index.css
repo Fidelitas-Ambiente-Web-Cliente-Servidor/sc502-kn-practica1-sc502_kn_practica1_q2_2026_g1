@@ -1,0 +1,143 @@
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+    background: linear-gradient(
+        rgba(10, 61, 98, 0.7),
+        rgba(10, 61, 98, 0.7)
+    ),
+    url('https://picsum.photos/1600/600?tech') center/cover no-repeat;
+    padding: 120px 0;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.btn-cta {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--color-acento);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-cta:hover {
+    background-color: var(--color-secundario);
+}
+
+/* ============================================================
+   CURSOS DESTACADOS
+   ============================================================ */
+
+.card-curso {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform .2s;
+}
+
+.card-curso:hover {
+    transform: translateY(-5px);
+}
+
+.card-curso img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-curso h3 {
+    margin-top: 15px;
+    color: var(--color-primario);
+}
+
+.card-curso p {
+    padding: 0 15px;
+}
+
+.btn-ver {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-ver:hover {
+    background-color: var(--color-secundario);
+}
+
+/* ============================================================
+   ESTADÍSTICAS
+   ============================================================ */
+
+.estadisticas {
+    background-color: var(--color-secundario);
+    color: white;
+    padding: 60px 0;
+    margin-top: 50px;
+}
+
+.stat h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.stat p {
+    margin-top: -10px;
+    font-size: 1.1rem;
+}
+
+/* ============================================================
+   TESTIMONIOS
+   ============================================================ */
+
+.testimonio {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.testimonio p {
+    font-style: italic;
+}
+
+.testimonio h4 {
+    margin-top: 15px;
+    color: var(--color-primario);
+}
+
+/* ============================================================
+   RESPONSIVIDAD
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .navbar .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
