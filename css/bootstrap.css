@@ -1,0 +1,26 @@
+/*Elementos y estructura global */
+
+html {
+    font-size: 85.5%;
+    box-sizing: border-box;
+}
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-size: 16px;
+    background-color: var(--bgcolor);
+  }
+
+  :root {
+    --bgcolor: #1A2148;
+    --secondarybgcolor : #232C5C;
+    --fontcolor : #F8FAFC;
+    --secondaryfontcolor : #CBD5E1;
+    --bordercolor : #334155;
+    --hovercolor : #00D9FF;
+    --hoverbgcolor : #303345;
+    --fontfamily : "Nunito", sans-serif;
+  }
