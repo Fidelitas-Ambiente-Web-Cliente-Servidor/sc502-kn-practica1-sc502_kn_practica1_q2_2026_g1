@@ -190,3 +190,6 @@
     padding-left: 0.5rem;
 }
 
+#idcontacto a {
+    color: var(--hovercolor);
+}
