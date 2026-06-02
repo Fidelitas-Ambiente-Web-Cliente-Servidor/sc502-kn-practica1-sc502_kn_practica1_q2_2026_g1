@@ -95,11 +95,7 @@ header {
     background-color: var(--fontcolor);
 }
 
-@media (min-width: 768PX) { 
-    .nav-item a{
-        font-size: 2rem;
-    }
-}
+
 
 /*LOGO*/
 
@@ -107,6 +103,178 @@ header {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.searchbar {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    padding: 0 1rem;
+}
+
+.searchbar .form-control {
+    background-color: var(--secondarybgcolor);
+    border-color: var(--bordercolor);
+    color: var(--fontcolor);
+}
+
+.searchbar .form-control::placeholder {
+    color: var(--secondaryfontcolor);
+}
+
+.searchbar .btn {
+    border-color: var(--hovercolor);
+    color: var(--hovercolor);
+    white-space: nowrap;
+}
+
+.searchbar .btn:hover {
+    background-color: var(--hovercolor);
+    color: var(--bgcolor);
+}
+
+/* CATEGORIES */
+
+.btn-group {
+    margin: 0 1rem 1.5rem 1rem;
+}
+
+.btn-group .btn-secondary {
+    background-color: var(--secondarybgcolor);
+    border-color: var(--bordercolor);
+    color: var(--fontcolor);
+}
+
+.dropdown-menu {
+    background-color: var(--secondarybgcolor);
+    border-color: var(--bordercolor);
+}
+
+.dropdown-menu a {
+    color: var(--fontcolor);
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--hoverbgcolor);
+    color: var(--hovercolor);
+}
+
+/* CARDS */
+
+.card {
+    background-color: var(--secondarybgcolor);
+    border-color: var(--bordercolor);
+    color: var(--fontcolor);
+    margin: 1rem auto;
+    width: 100% !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 217, 255, 0.15);
+}
+
+.card-title {
+    color: var(--fontcolor);
+}
+
+.card-text {
+    color: var(--secondaryfontcolor);
+}
+
+.course-banner {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 217, 255, 0.15);
+    margin-bottom: 15px;
+}
+
+.card-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge {
+    background-color: var(--hoverbgcolor) !important;
+}
+
+.btn-primary {
+    background-color: var(--hovercolor);
+    border-color: var(--hovercolor)
+}
+
+.btn:hover {
+    background-color: var(--hovercolor2);
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--secondarybgcolor);
+    color: var(--secondaryfontcolor);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid var(--bordercolor);
+    font-family: var(--fontfamily);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 0.5rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .card {
+        width: 100% !important;
+    }
+
+    .searchbar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .searchbar .btn {
+        width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    .card {
+        width: 100% !important;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .col {
+        width: 50%;
+        flex: 0 0 50%;
+    }
+}
+
+@media (min-width: 993px) {
+    .col {
+        flex: 1;
+    }
+}
+
+@media (min-width: 768PX) { 
+    .nav-item a{
+        font-size: 2rem;
+    }
 }
 
 
