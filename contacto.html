@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - TechForge Academy</title>
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+   
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/cursos.css">
+    <link rel="stylesheet" href="./css/contacto.css">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/TechForge_logo.png" alt="Logo" class="logo">
+                </a>
+                <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="idindex">
+                            <a class="nav-link" href="./index.html">Index</a>
+                        </li>
+                        <li class="nav-item" id="idcursos">
+                            <a class="nav-link" href="./cursos.html">Cursos</a>
+                        </li>
+                        <li class="nav-item" id="idprofesores">
+                            <a class="nav-link" href="./profesores.html">Profesores</a>
+                        </li>
+                        <li class="nav-item" id="idcontacto">
+                            <a class="nav-link active" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ENCABEZADO -->
+        <div class="container text-center">
+            <h1 class="principal_text principal mt-4">Ponte en Contacto con Nosotros</h1>
+            <p class="principal_text">¿Tienes preguntas? Estamos aquí para ayudarte. Contáctanos y nos comunicaremos contigo pronto.</p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- COLUMNA 1: FORMULARIO -->
+                <div class="col-lg-6">
+                    <section class="contact-form-section">
+                        <h2 class="section-subtitle mb-4">Envíanos un Mensaje</h2>
+                        <form class="contact-form">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre Completo</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="correo" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="correo" name="correo" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="asunto" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="asunto" name="asunto" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-contacto w-100">Enviar Mensaje</button>
+                        </form>
+                    </section>
+                </div>
+
+                <!-- COLUMNA 2: INFORMACION DE CONTACTO -->
+                <div class="col-lg-6">
+                    <section class="contact-info-section">
+                        <h2 class="section-subtitle mb-4">Información de Contacto</h2>
+                        
+                        <div class="info-item">
+                            <h4 class="info-title"> Dirección</h4>
+                            <p class="info-text">Av. Escazú 500, San José, Costa Rica</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4 class="info-title"> Teléfono</h4>
+                            <p class="info-text">(506) 2225-1234</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4 class="info-title">Correo</h4>
+                            <p class="info-text">info@techforgeacademy.com</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4 class="info-title">Horario de Atención</h4>
+                            <p class="info-text">Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábado: 9:00 AM - 1:00 PM</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAPA -->
+        <section class="contact-map mt-5">
+            <div class="container">
+                <h2 class="section-subtitle mb-4 text-center">Ubicación</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.123456789!2d-84.127884!3d9.933933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0a3c1ce5c5c5d%3A0x5c5c5c5c5c5c5c5c!2sEscaz%C3%BA%2C%20San%20Jos%C3%A9!5e0!3m2!1ses!2scr!4v1234567890" width="100%" height="400" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>© 2026 TechForge Academy</p>
+            <p>Síguenos en redes: Facebook | Instagram | LinkedIn</p>
+            <p>Desarrollado por el Grupo 1 - Cliente/Servidor - U.Fidelitas</p>
+        </div>
+    </footer>
+
+</body>
+</html>
