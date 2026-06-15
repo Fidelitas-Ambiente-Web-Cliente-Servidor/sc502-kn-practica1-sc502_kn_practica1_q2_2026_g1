@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,157 +54,30 @@
     </header>
     <main>
 
-         <div class="container-fluid">
-            <form class="d-flex searchbar" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+        <div class="container-fluid">
+            <div class="search-row">
+                <div class="btn-group dropend">
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categorias
+                    </button>
+                    <ul class="dropdown-menu" id="categoriaMenu">
+                        <li><a href="#" class="dropdown-item" data-categoria="todos">Todos</a></li>
+                        <li><a href="#" class="dropdown-item" data-categoria="Ciberseguridad">Ciberseguridad</a></li>
+                        <li><a href="#" class="dropdown-item" data-categoria="Programacion">Programacion</a></li>
+                        <li><a href="#" class="dropdown-item" data-categoria="IA">IA</a></li>
+                        <li><a href="#" class="dropdown-item" data-categoria="Sistemas Operativos">Sistemas Operativos</a></li>
+                    </ul>
+                </div>
+                <form class="d-flex searchbar" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" id="searchInput" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
-        <div class="btn-group dropend">
-            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Categorias
-            </button>
-            <ul class="dropdown-menu">
-                <li><a href="#" class="dropdown-item"">Ciberseguridad</a></li>
-                <li><a href="#" class="dropdown-item">Programacion</a></li>
-                <li><a href="#" class="dropdown-item">IA</a></li>
-                <li><a href="#" class="dropdown-item">Sistemas Operativos</a></li>
-            </ul>
-        </div>
-       
+
         <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">Ciberseguridad</span>
-                        <div class="card-body">
-                            <img src="./images/curso_ciber.jpg" alt="Curso Ciber" class="course-banner">
-                            <h5 class="card-title">Fundamentos de Ciberseguridad</h5>
-                            <p class="card-text">Protegé sistemas, redes y datos con técnicas modernas.</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">IA
-                            </span>
-                        <div class="card-body">
-                            <img src="./images/curso_IA.jpg" alt="Curso IA" class="course-banner">
-                            <h5 class="card-title">Introducción a la Inteligencia Artificial</h5>
-                            <p class="card-text">Conocé los conceptos clave del machine learning.</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">Programacion</span>
-                        <div class="card-body">
-                            <img src="./images/curso_fullstack.png" alt="Curso FullStack" class="course-banner">
-                            <h5 class="card-title">Desarrollo Web Full Stack</h5>
-                            <p class="card-text">Aprendé HTML, CSS, JavaScript, PHP y MySQL desde cero.</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">IA</span>
-                    
-                        <div class="card-body">
-                             <img src="./images/curso_predictivos.jpg" alt="Curso de modelos predictivos" class="course-banner">
-                             <h5 class="card-title">Modelos predictivos</h5>
-                            <p class="card-text">Descubre como potenciar a tu agente virtual con algoritmos predictivos de datos y escenarios</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">Programacion</span>
-                        <div class="card-body">
-                            <img src="./images/curso_sap.png" alt="Curso Sap" class="course-banner">
-                            <h5 class="card-title">De 0 a Experto en SAP</h5>
-                            <p class="card-text">Conocé todo sobre este lenguaje de programacion enfocado en administracion empresarial y de inventarios</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">Programacion</span>
-                        <div class="card-body">
-                            <img src="./images/curso_python.jpg" alt="Curso Python" class="course-banner">
-                            <h5 class="card-title">Python basico</h5>
-                            <p class="card-text">comienza a aprender uno de los lenguajes de programacion mas demandantes del mercado</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">Sistemas operativos</span>
-                        <div class="card-body">
-                             <img src="./images/curso_sis_operativos.jpg" alt="Curso Sistemas operativos" class="course-banner">
-                            <h5 class="card-title">Fundamentos de sistemas operativos</h5>
-                            <p class="card-text">Entiende como funcionan los sistemas operativos mas populares y aprende a manejarlos como un profesional</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">Programacion</span>
-                        <div class="card-body">
-                            <img src="./images/curso_kotlin_swift.jpg" alt="Curso Sistemas operativos" class="course-banner">
-                            <h5 class="card-title">Desarrollo movil Nativo: Kotlin + Swift desde 0</h5>
-                            <p class="card-text">Masteriza los lenguajes de programacion movil y lanza tu primera aplicacion</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                      <div class="card" style="width: 18rem;">
-                        <span class="badge text-bg-primary">Programacion</span>
-                        <div class="card-body">
-                            <img src="./images/curso_git_github.png" alt="Curso Sistemas operativos" class="course-banner">
-                            <h5 class="card-title">Control de versiones: Git + Github</h5>
-                            <p class="card-text">Toma el control de tus proyectos y aprende versionamiento con Git y Github</p>
-                            <div class="card-options">
-                                <a href="#" class="btn btn-primary">Ver curso</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
+            <div class="row" id="cursosContainer">
+                <!-- Las tarjetas se generan dinámicamente con JS -->
             </div>
         </div>
     </main>
@@ -218,7 +90,7 @@
             <p>Desarrollado por el Grupo 1 - Cliente/Servidor - U.Fidelitas</p>
         </div>
     </footer>
-    
+
+    <script src="./js/cursos.js"></script>
 </body>
 </html>
-
