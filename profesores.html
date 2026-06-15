@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/cursos.css">
+    <link rel="stylesheet" href="./css/profesores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./images/TechForge_logo.png" alt="Logo" class="logo">
+                </a>
+                <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="idindex">
+                            <a class="nav-link" href="./index.html">Index</a>
+                        </li>
+                        <li class="nav-item" id="idcursos">
+                            <a class="nav-link" href="./cursos.html">Cursos</a>
+                        </li>
+                        <li class="nav-item" id="idprofesores">
+                            <a class="nav-link active" href="./profesores.html">Profesores</a>
+                        </li>
+                        <li class="nav-item" id="idcontacto">
+                            <a class="nav-link" href="./contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center">
+            <h1 class="principal_text principal mt-4">Nuestro Equipo</h1>
+            <p class="principal_text">Conoce a los profesores que imparten nuestros cursos.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container text-center mt-4">
+            <div class="row">
+                <div class="col">
+                    <div class="card prof-card" style="margin: 0 auto;">
+                        <span class="badge text-bg-primary">Python</span>
+                        <div class="card-body">
+                            <img src="./images/profesores/maria_lopez.jpg" alt="María López" class="course-banner">
+                            <h5 class="card-title">Ing. María López</h5>
+                            <p class="card-text">Especialidad: Python y Data Science. Ingeniera de datos con experiencia práctica.</p>
+                            <div class="card-options">
+                                <a href="#" class="btn btn-ver-prof" data-bs-toggle="modal" data-bs-target="#modal-maria">Ver profesor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card prof-card" style="margin: 0 auto;">
+                        <span class="badge text-bg-primary">IA</span>
+                        <div class="card-body">
+                            <img src="./images/profesores/dr_carlos.jpg" alt="Carlos Méndez" class="course-banner">
+                            <h5 class="card-title">Dr. Carlos Méndez</h5>
+                            <p class="card-text">Especialidad: Inteligencia Artificial. Docente e investigador en ML.</p>
+                            <div class="card-options">
+                                <a href="#" class="btn btn-ver-prof" data-bs-toggle="modal" data-bs-target="#modal-carlos">Ver profesor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card prof-card" style="margin: 0 auto;">
+                        <span class="badge text-bg-primary">Programacion</span>
+                        <div class="card-body">
+                            <img src="./images/profesores/ana_rodriguez.jpg" alt="Ana Rodríguez" class="course-banner">
+                            <h5 class="card-title">Prof. Ana Rodríguez</h5>
+                            <p class="card-text">Especialidad: Desarrollo Web Full Stack y UX.</p>
+                            <div class="card-options">
+                                <a href="#" class="btn btn-ver-prof" data-bs-toggle="modal" data-bs-target="#modal-ana">Ver profesor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card prof-card" style="margin: 0 auto;">
+                        <span class="badge text-bg-primary">DevOps</span>
+                        <div class="card-body">
+                            <img src="./images/profesores/javier_vargas.jpg" alt="Javier Vargas" class="course-banner">
+                            <h5 class="card-title">Mtro. Javier Vargas</h5>
+                            <p class="card-text">Especialidad: Control de versiones, CI/CD y buenas prácticas.</p>
+                            <div class="card-options">
+                                <a href="#" class="btn btn-ver-prof" data-bs-toggle="modal" data-bs-target="#modal-javier">Ver profesor</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Misión</h3>
+                    <p>Formar profesionales competentes en tecnología con metodologías prácticas y aplicables.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Visión</h3>
+                    <p>Ser referentes en formación tecnológica, impulsando la innovación y la empleabilidad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>© 2026 TechForge Academy</p>
+            <p>Síguenos en redes: Facebook | Instagram | LinkedIn</p>
+            <p>Desarrollado por el Grupo 1 - Cliente/Servidor - U.Fidelitas</p>
+        </div>
+    </footer>
+
+        <!-- Profesor Modals -->
+        <div class="modal fade" id="modal-maria" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Ing. María López</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4"><img src="./images/profesores/maria_lopez.jpg" class="img-fluid" alt="María López"></div>
+                            <div class="col-md-8">
+                                <p><strong>Especialidad:</strong> Python y Data Science</p>
+                                <h6>Estudios</h6>
+                                <ul>
+                                    <li>Ingeniería en Sistemas de Información, Universidad de Costa Rica.</li>
+                                    <li>Maestría en Ciencia de Datos, Tecnológico de Costa Rica.</li>
+                                </ul>
+                                <h6>Experiencia laboral</h6>
+                                <ul>
+                                    <li>6 años como ingeniera de datos en banca y retail.</li>
+                                    <li>Liderazgo de proyectos ETL y modelos predictivos en producción.</li>
+                                    <li>Mentora técnica en programas de inserción laboral junior.</li>
+                                </ul>
+                                <h6>Certificaciones relevantes</h6>
+                                <ul>
+                                    <li>Google Data Analytics Professional Certificate.</li>
+                                    <li>AWS Certified Cloud Practitioner.</li>
+                                    <li>Microsoft Azure Fundamentals (AZ-900).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-carlos" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Dr. Carlos Méndez</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4"><img src="./images/profesores/dr_carlos.jpg" class="img-fluid" alt="Carlos Méndez"></div>
+                            <div class="col-md-8">
+                                <p><strong>Especialidad:</strong> Inteligencia Artificial</p>
+                                <h6>Estudios</h6>
+                                <ul>
+                                    <li>Doctorado en Ciencias de la Computación, enfoque en IA aplicada.</li>
+                                    <li>Maestría en Inteligencia Artificial y Analítica Avanzada.</li>
+                                </ul>
+                                <h6>Experiencia laboral</h6>
+                                <ul>
+                                    <li>10 años en investigación aplicada en visión por computador y NLP.</li>
+                                    <li>Consultor en proyectos de IA para industria financiera y salud.</li>
+                                    <li>Director académico de programas de especialización en ML.</li>
+                                </ul>
+                                <h6>Certificaciones relevantes</h6>
+                                <ul>
+                                    <li>TensorFlow Developer Certificate.</li>
+                                    <li>DeepLearning.AI Machine Learning Specialization.</li>
+                                    <li>IBM AI Engineering Professional Certificate.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-ana" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Prof. Ana Rodríguez</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4"><img src="./images/profesores/ana_rodriguez.jpg" class="img-fluid" alt="Ana Rodríguez"></div>
+                            <div class="col-md-8">
+                                <p><strong>Especialidad:</strong> Desarrollo Web Full Stack</p>
+                                <h6>Estudios</h6>
+                                <ul>
+                                    <li>Bachillerato en Ingeniería de Software.</li>
+                                    <li>Especialización en UX/UI para productos digitales.</li>
+                                </ul>
+                                <h6>Experiencia laboral</h6>
+                                <ul>
+                                    <li>8 años construyendo plataformas web con equipos ágiles.</li>
+                                    <li>Liderazgo técnico en frontend y arquitectura de componentes.</li>
+                                    <li>Mentoría de bootcamps full stack y proyectos capstone.</li>
+                                </ul>
+                                <h6>Certificaciones relevantes</h6>
+                                <ul>
+                                    <li>Professional Scrum Master I (PSM I).</li>
+                                    <li>Meta Front-End Developer Certificate.</li>
+                                    <li>Google UX Design Certificate.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="modal-javier" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Mtro. Javier Vargas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-4"><img src="./images/profesores/javier_vargas.jpg" class="img-fluid" alt="Javier Vargas"></div>
+                            <div class="col-md-8">
+                                <p><strong>Especialidad:</strong> DevOps y Control de Versiones</p>
+                                <h6>Estudios</h6>
+                                <ul>
+                                    <li>Ingeniería en Computación.</li>
+                                    <li>Maestría en Arquitectura de Software.</li>
+                                </ul>
+                                <h6>Experiencia laboral</h6>
+                                <ul>
+                                    <li>9 años en automatización CI/CD e infraestructura cloud.</li>
+                                    <li>Implementación de pipelines y estándares de versionamiento empresarial.</li>
+                                    <li>Capacitación de equipos en Git, branching strategy y release management.</li>
+                                </ul>
+                                <h6>Certificaciones relevantes</h6>
+                                <ul>
+                                    <li>AWS Certified Developer - Associate.</li>
+                                    <li>GitHub Actions Certification.</li>
+                                    <li>Docker and Kubernetes Fundamentals.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

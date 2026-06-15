@@ -1,0 +1,195 @@
+@import url(bootstrap.css);
+
+/*  ESTILOS ESPECIFICOS PARA PAGINA DE CONTACTO */
+
+/* Texto de sección */
+.section-subtitle {
+    color: var(--fontcolor);
+    font-family: var(--fontfamily);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--hovercolor);
+}
+
+/* FORMULARIO DE CONTACTO */
+
+.contact-form-section {
+    background-color: var(--secondarybgcolor);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--bordercolor);
+    box-shadow: 0 4px 12px rgba(0, 217, 255, 0.1);
+}
+
+.contact-form .form-label {
+    color: var(--fontcolor);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.contact-form .form-control {
+    background-color: var(--bgcolor);
+    border: 1px solid var(--bordercolor);
+    color: var(--fontcolor);
+    padding: 0.75rem 1rem;
+    font-family: var(--fontfamily);
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control::placeholder {
+    color: var(--secondaryfontcolor);
+}
+
+.contact-form .form-control:focus {
+    background-color: var(--bgcolor);
+    border-color: var(--hovercolor);
+    color: var(--fontcolor);
+    box-shadow: 0 0 0 0.2rem rgba(0, 217, 255, 0.15);
+}
+
+.contact-form textarea.form-control {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Boton de envio */
+.btn-contacto {
+    background-color: var(--hovercolor);
+    border-color: var(--hovercolor);
+    color: var(--bgcolor);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.btn-contacto:hover {
+    background-color: var(--hovercolor2);
+    border-color: var(--hovercolor2);
+    color: var(--fontcolor);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 217, 255, 0.2);
+}
+
+/* INFORMACION DE CONTACTO */
+
+.contact-info-section {
+    background-color: var(--secondarybgcolor);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--bordercolor);
+    box-shadow: 0 4px 12px rgba(0, 217, 255, 0.1);
+}
+
+.info-item {
+    margin-bottom: 1.8rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--bordercolor);
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.info-title {
+    color: var(--hovercolor);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-text {
+    color: var(--fontcolor);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/*MAPA INCRUSTADO */
+
+.contact-map {
+    background-color: var(--secondarybgcolor);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--bordercolor);
+    box-shadow: 0 4px 12px rgba(0, 217, 255, 0.1);
+    margin-bottom: 3rem;
+}
+
+.contact-map iframe {
+    box-shadow: 0 4px 12px rgba(0, 217, 255, 0.15);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+    .contact-form-section,
+    .contact-info-section {
+        margin-bottom: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form-section,
+    .contact-info-section,
+    .contact-map {
+        padding: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .contact-map iframe {
+        height: 300px !important;
+    }
+
+    .info-item {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* ANIMACIONES Y EFECTOS */
+
+/* Efecto de entrada suave */
+.contact-form-section,
+.contact-info-section,
+.contact-map {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Efecto hover en items de informacion */
+.info-item {
+    transition: transform 0.3s ease, padding-left 0.3s ease;
+}
+
+.info-item:hover {
+    transform: translateX(8px);
+    padding-left: 0.5rem;
+}
+
+#idcontacto a {
+    color: var(--hovercolor);
+}

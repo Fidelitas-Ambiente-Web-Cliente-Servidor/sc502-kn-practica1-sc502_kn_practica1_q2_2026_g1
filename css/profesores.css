@@ -1,0 +1,62 @@
+/* Page-specific tweaks for Profesores (keeps Cursos look) */
+.principal_text {
+    color: #ffffff !important;
+}
+
+.lead {
+    color: #ffffff !important;
+}
+
+.card .card-title {
+    margin-top: 0.5rem;
+}
+
+.card .card-text {
+    font-size: 0.95rem;
+}
+
+.course-banner {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Ensure professor cards match Cursos size/orientation */
+.prof-card {
+    width: 18rem !important;
+    margin: 0 auto;
+}
+
+/* Center card body content and ensure images are centered */
+.prof-card .card-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-ver-prof {
+    background-color: var(--hovercolor);
+    border-color: var(--hovercolor);
+    color: var(--bgcolor);
+    margin-top: 8px;
+}
+
+.btn-ver-prof:hover {
+    background-color: var(--hovercolor2);
+    color: var(--fontcolor);
+}
+
+@media (max-width: 767px) {
+    .course-banner { height: 120px; }
+    .card { margin-bottom: 1rem; }
+}
+
+/* Mission / Vision text should be white for contrast */
+main section.container .col-md-6 h3,
+main section.container .col-md-6 p {
+    color: #ffffff !important;
+}
