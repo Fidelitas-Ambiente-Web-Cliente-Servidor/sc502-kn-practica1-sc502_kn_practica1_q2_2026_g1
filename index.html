@@ -3,136 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechForge Academy - Inicio</title>
-
-    <!-- Bootstrap SOLO para grid -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-
-    <!-- Estilos globales -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Estilos propios de la página -->
-    <link rel="stylesheet" href="index.css">
+    <title>Index</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <!-- NAVBAR GLOBAL -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-            <img src="img/logo1.png" alt="TechForge Academy">
+    <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid nav-container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/TechForge_logo.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="idindex">
+                        <a class="nav-link" href="./index.html">Index</a>
+                    </li>
+                    <li class="nav-item" id="idcursos">
+                        <a class="nav-link" href="./cursos.html">Cursos</a>
+                    </li>
+                    <li class="nav-item" id="idprofesores">
+                        <a class="nav-link" href="./profesores.html">Profesores</a>
+                    </li>
+                    <li class="nav-item" id="idcontacto">
+                        <a class="nav-link" href="./contacto.html" >Contacto</a>
+                    </li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="profesores.html">Profesores</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
         </div>
     </nav>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="container text-center">
-            <h1>Impulsa tu futuro en tecnología</h1>
-            <p>Aprendé habilidades digitales con cursos prácticos y actualizados</p>
-            <a href="cursos.html" class="btn-cta">Ver Cursos</a>
-        </div>
+    <!-- TITULO PRINCIPAL IGUAL A CURSOS -->
+    <h1 class="principal_text principal">Bienvenido a TechForge Academy</h1>
+    <p class="principal_text">Impulsa tu futuro en tecnología con cursos prácticos y actualizados</p>
+
     </header>
 
-    <!-- CURSOS DESTACADOS -->
-    <section class="cursos-destacados container">
-        <h2 class="section-title">Cursos Destacados</h2>
+<main>
 
-        <div class="row mt-4">
-
-            <div class="col-md-4">
-                <div class="card-curso">
-                    <img src="https://picsum.photos/400/250?random=1" alt="Curso 1">
-                    <h3>Desarrollo Web Full Stack</h3>
-                    <p>Aprendé HTML, CSS, JavaScript, PHP y MySQL desde cero.</p>
-                    <a href="cursos.html" class="btn-ver">Ver más</a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card-curso">
-                    <img src="https://picsum.photos/400/250?random=2" alt="Curso 2">
-                    <h3>Fundamentos de Ciberseguridad</h3>
-                    <p>Protegé sistemas, redes y datos con técnicas modernas.</p>
-                    <a href="cursos.html" class="btn-ver">Ver más</a>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card-curso">
-                    <img src="https://picsum.photos/400/250?random=3" alt="Curso 3">
-                    <h3>Introducción a la Inteligencia Artificial</h3>
-                    <p>Conocé los conceptos clave del machine learning.</p>
-                    <a href="cursos.html" class="btn-ver">Ver más</a>
-                </div>
-            </div>
-
+    <!-- CURSOS DESTACADOS GENERADOS POR JAVASCRIPT -->
+    <div class="container text-center">
+        <div class="row course-row" id="cursos-destacados">
         </div>
-    </section>
+    </div>
 
     <!-- ESTADÍSTICAS -->
-    <section class="estadisticas">
-        <div class="container text-center">
-            <h2 class="section-title">Nuestra Comunidad</h2>
+    <div class="container">
+        <h2 class="principal_text principal">Nuestra Comunidad</h2>
+    </div>
 
-            <div class="row mt-4">
+    <div class="container text-center">
+        <div class="stats-row">
 
-                <div class="col-md-4">
-                    <div class="stat">
-                        <h3>+1200</h3>
-                        <p>Estudiantes Activos</p>
+            <div class="stats-col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">+1200</h3>
+                        <p class="card-text">Estudiantes Activos</p>
                     </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="stat">
-                        <h3>15</h3>
-                        <p>Profesores Expertos</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="stat">
-                        <h3>25</h3>
-                        <p>Cursos Disponibles</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIOS -->
-    <section class="testimonios container">
-        <h2 class="section-title">Testimonios</h2>
-
-        <div class="row mt-4">
-
-            <div class="col-md-6">
-                <div class="testimonio">
-                    <p>"Los cursos son súper prácticos y los profesores explican excelente. Aprendí más en 2 meses que en un año por mi cuenta."</p>
-                    <h4>- Ana Rodríguez</h4>
                 </div>
             </div>
 
-            <div class="col-md-6">
-                <div class="testimonio">
-                    <p>"La academia me ayudó a conseguir mi primer trabajo como desarrollador junior. Totalmente recomendado."</p>
-                    <h4>- Carlos Méndez</h4>
+            <div class="stats-col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">15</h3>
+                        <p class="card-text">Profesores Expertos</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">25</h3>
+                        <p class="card-text">Cursos Disponibles</p>
+                    </div>
                 </div>
             </div>
 
         </div>
-    </section>
+    </div>
 
-    <!-- FOOTER GLOBAL -->
+</main>
+
+    <!-- FOOTER IGUAL A CURSOS -->
     <footer class="footer">
         <div class="container text-center">
             <p>© 2026 TechForge Academy</p>
@@ -140,6 +104,8 @@
             <p>Desarrollado por el Grupo 1 - Cliente/Servidor - U.Fidelitas</p>
         </div>
     </footer>
+
+<script src="./js/index.js"></script>
 
 </body>
 </html>
