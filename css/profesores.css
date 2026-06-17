@@ -55,8 +55,88 @@
     .card { margin-bottom: 1rem; }
 }
 
+/* Mission / Vision section - full width and responsive */
+/* Using !important to override cursos.css global styles */
+main section.container {
+    max-width: 95% !important;
+    width: 95% !important;
+    padding: 0 2.5% !important;
+    margin: 0 auto !important;
+}
+
+main section.container .row {
+    display: flex !important;
+    grid-template-columns: none !important;
+    justify-content: space-between;
+    gap: 2% !important;
+    width: 100% !important;
+}
+
+main section.container .col-md-6 {
+    flex: 1 1 49% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+}
+
 /* Mission / Vision text should be white for contrast */
 main section.container .col-md-6 h3,
 main section.container .col-md-6 p {
     color: #ffffff !important;
+}
+
+/* Modal styling with blue background and white text */
+#modal-profesor-dinamico .modal-content {
+    background-color: var(--secondarybgcolor);
+    color: var(--fontcolor);
+    border: 1px solid var(--bordercolor);
+}
+
+#modal-profesor-dinamico .modal-header {
+    background-color: var(--hoverbgcolor);
+    border-bottom: 2px solid var(--hovercolor);
+}
+
+#modal-profesor-dinamico .modal-title {
+    color: var(--hovercolor);
+    font-weight: 600;
+}
+
+#modal-profesor-dinamico .modal-body {
+    background-color: var(--secondarybgcolor);
+    color: var(--fontcolor);
+}
+
+#modal-profesor-dinamico .modal-body p,
+#modal-profesor-dinamico .modal-body h6,
+#modal-profesor-dinamico .modal-body li {
+    color: var(--fontcolor);
+}
+
+#modal-profesor-dinamico .modal-body strong {
+    color: var(--hovercolor);
+}
+
+#modal-profesor-dinamico .modal-body h6 {
+    color: var(--hovercolor);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--bordercolor);
+    padding-bottom: 0.5rem;
+}
+
+#modal-profesor-dinamico .btn-close {
+    filter: invert(1);
+    opacity: 0.8;
+}
+
+#modal-profesor-dinamico .btn-close:hover {
+    opacity: 1;
+}
+
+#modal-profesor-dinamico .modal-body img {
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 217, 255, 0.2);
+    border: 2px solid var(--bordercolor);
 }

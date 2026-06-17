@@ -14,20 +14,26 @@
 }
 
 /* CONTENEDOR PRINCIPAL - Asegura que el layout esté bien distribuido */
-.container {
-    max-width: 100%;
-    padding: 0 20px;
+/* Using !important to override cursos.css global styles */
+main > .container {
+    max-width: 95% !important;
+    width: 95% !important;
+    padding: 0 2.5% !important;
+    margin: 0 auto !important;
 }
 
 main .container .row {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
+    display: flex !important;
+    grid-template-columns: none !important;
+    justify-content: space-between;
+    gap: 2% !important;
+    width: 100% !important;
 }
 
 main .container .row .col-lg-6 {
-    flex: 0 1 calc(50% - 1rem);
-    min-width: 0;
+    flex: 1 1 49% !important;
+    min-width: 0 !important;
+    max-width: none !important;
 }
 
 /* FORMULARIO DE CONTACTO */
