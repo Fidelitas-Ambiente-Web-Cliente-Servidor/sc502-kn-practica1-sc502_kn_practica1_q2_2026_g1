@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/cursos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid nav-container">
+            <a class="navbar-brand" href="#">
+                <img src="./images/TechForge_logo.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" id="idindex">
+                        <a class="nav-link" href="index.php?controller=index&action=index">Index</a>
+                    </li>
+                    <li class="nav-item" id="idcursos">
+                        <a class="nav-link" href="index.php?controller=cursos&action=index">Cursos</a>
+                    </li>
+                    <li class="nav-item" id="idprofesores">
+                        <a class="nav-link" href="index.php?controller=profesores&action=index">Profesores</a>
+                    </li>
+                    <li class="nav-item" id="idcontacto">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="principal_text principal">Central de Aprendizaje</h1>
+    <p class="principal_text">Encuentra el curso que desees, filtra por categoria y comienza a aprender</p>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <div class="search-row">
+                <form class="d-flex searchbar" method="GET" action="index.php">
+                    <input type="hidden" name="controller" value="cursos">
+                    <input type="hidden" name="action" value="index">
+                    <select class="btn btn-secondary" name="categoria" onchange="this.form.submit()">
+                        <option value="todos" <?= ($categoria === 'todos') ? 'selected' : '' ?>>Todos</option>
+                        <?php foreach ($categorias as $cat): ?>
+                            <option value="<?= htmlspecialchars($cat) ?>" <?= ($categoria === $cat) ? 'selected' : '' ?>>
+                                <?= htmlspecialchars($cat) ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                </form>
+            </div>
+        </div>
+
+        <div class="container text-center">
+            <div class="row" id="cursosContainer">
+                <?php if (empty($cursos)): ?>
+                    <div class="col-12">
+                        <p class="principal_text">No se encontraron cursos en esta categoría.</p>
+                    </div>
+                <?php else: ?>
+                    <?php foreach ($cursos as $curso): ?>
+                        <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                            <div class="card" style="width: 25rem; margin: 0 auto;">
+                                <span class="badge text-bg-primary"><?= htmlspecialchars($curso['categoria']) ?></span>
+                                <div class="card-body">
+                                    <img src="<?= htmlspecialchars($curso['imagen']) ?>" alt="<?= htmlspecialchars($curso['nombre']) ?>" class="course-banner">
+                                    <h5 class="card-title"><?= htmlspecialchars($curso['nombre']) ?></h5>
+                                    <p class="card-text"><?= htmlspecialchars($curso['descripcion']) ?></p>
+                                    <p class="card-text"><strong>Duración:</strong> <?= htmlspecialchars($curso['duracion']) ?></p>
+                                    <p class="card-text"><strong>Precio:</strong> ₡<?= number_format($curso['precio'], 0, ',', '.') ?></p>
+                                    <div class="card-options">
+                                        <a href="#" class="btn btn-primary">Ver curso</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container text-center">
+            <p>© 2026 TechForge Academy</p>
+            <p>Síguenos en redes: Facebook | Instagram | LinkedIn</p>
+            <p>Desarrollado por el Grupo 1 - Cliente/Servidor - U.Fidelitas</p>
+        </div>
+    </footer>
+
+    <script src="./js/cursos.js"></script>
+</body>
+</html>
