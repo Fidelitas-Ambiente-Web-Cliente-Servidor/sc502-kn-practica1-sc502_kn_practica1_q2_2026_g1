@@ -18,3 +18,19 @@ INSERT INTO cursos (nombre, descripcion, categoria, duracion, precio, imagen) VA
 ('Fundamentos de sistemas operativos', 'Entiende como funcionan los sistemas operativos más populares y aprende a manejarlos como un profesional.', 'Sistemas Operativos', '8 semanas', 110000, './images/curso_sis_operativos.jpg'),
 ('Desarrollo movil Nativo: Kotlin + Swift desde 0', 'Masteriza los lenguajes de programación móvil y lanza tu primera aplicación.', 'Programacion', '18 semanas', 220000, './images/curso_kotlin_swift.jpg'),
 ('Control de versiones: Git + Github', 'Toma el control de tus proyectos y aprende versionamiento con Git y Github.', 'Programacion', '4 semanas', 60000, './images/curso_git_github.png');
+
+CREATE TABLE IF NOT EXISTS contacto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
+    telefono VARCHAR(20) NOT NULL,
+    asunto VARCHAR(150) NOT NULL,
+    mensaje TEXT NOT NULL
+);
+
+INSERT INTO contacto (nombre, correo, telefono, asunto, mensaje) VALUES
+('Laura Hernández', 'laura@gmail.com', '88887777', 'Consulta de matrícula', 'Deseo recibir información sobre el proceso de matrícula.'),
+('Carlos Mora', 'carlos@gmail.com', '88886666', 'Información', 'Quiero conocer más detalles sobre los cursos disponibles.'),
+('Ana Solís', 'ana@gmail.com', '88885555', 'Horarios', 'Necesito saber los horarios de los cursos de programación.'),
+('Diego Rojas', 'diego@gmail.com', '88884444', 'Costo', 'Me gustaría conocer el precio de los cursos de Inteligencia Artificial.'),
+('María Pérez', 'maria@gmail.com', '88883333', 'Soporte', 'Tengo una consulta sobre el acceso a la plataforma virtual.');

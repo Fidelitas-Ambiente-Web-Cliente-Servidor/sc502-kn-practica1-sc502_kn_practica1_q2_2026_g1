@@ -66,9 +66,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Añadir listener al evento submit del formulario
     form.addEventListener('submit', function(e) {
+
+    validateName(nameInput);
+    validateEmail(emailInput);
+    validatePhone(phoneInput);
+    validateSubject(subjectInput);
+    validateMessage(messageInput);
+
+    const allValid =
+        validationState.nombre &&
+        validationState.correo &&
+        validationState.telefono &&
+        validationState.asunto &&
+        validationState.mensaje;
+
+    if (!allValid) {
         e.preventDefault();
-        handleFormSubmit(form, submitButton);
-    });
+    }
+
+});
 
     // Desabilitar botón inicialmente
     submitButton.disabled = true;
@@ -276,7 +292,8 @@ function updateSubmitButton() {
  * @param {HTMLElement} form - El formulario
  * @param {HTMLElement} submitButton - El botón de envío
  */
-function handleFormSubmit(form, submitButton) {
+
+/*function handleFormSubmit(form, submitButton) {
     // Crear y mostrar mensaje de éxito
     showSuccessMessage();
     
@@ -304,6 +321,8 @@ function handleFormSubmit(form, submitButton) {
  * Muestra un mensaje de éxito en pantalla
  * El mensaje se elimina después de 5 segundos
  */
+
+/*
 function showSuccessMessage() {
     // Obtener el contenedor principal del formulario
     const formSection = document.querySelector('.contact-form-section');
@@ -325,4 +344,4 @@ function showSuccessMessage() {
     setTimeout(() => {
         successAlert.remove();
     }, 5000);
-}
+}*/

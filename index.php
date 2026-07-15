@@ -13,6 +13,11 @@ switch ($controller) {
     // case 'profesores': ...
     // case 'contacto': ...
 
+    case 'contacto':
+        require_once __DIR__ . '/controllers/ContactoController.php';
+        $obj = new ContactoController();
+        break;
+
     default:
         http_response_code(404);
         echo "Controlador no encontrado";
