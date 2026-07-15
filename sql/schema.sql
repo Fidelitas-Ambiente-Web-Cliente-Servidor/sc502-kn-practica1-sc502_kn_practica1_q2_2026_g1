@@ -34,3 +34,43 @@ INSERT INTO contacto (nombre, correo, telefono, asunto, mensaje) VALUES
 ('Ana Solís', 'ana@gmail.com', '88885555', 'Horarios', 'Necesito saber los horarios de los cursos de programación.'),
 ('Diego Rojas', 'diego@gmail.com', '88884444', 'Costo', 'Me gustaría conocer el precio de los cursos de Inteligencia Artificial.'),
 ('María Pérez', 'maria@gmail.com', '88883333', 'Soporte', 'Tengo una consulta sobre el acceso a la plataforma virtual.');
+
+CREATE TABLE IF NOT EXISTS profesores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(150) NOT NULL,
+    especialidad VARCHAR(150) NOT NULL,
+    descripcion TEXT NOT NULL,
+    foto VARCHAR(255) NOT NULL,
+    correo VARCHAR(100) NOT NULL,
+    cursos_que_imparte VARCHAR(255) NOT NULL,
+    badge VARCHAR(50) NOT NULL,
+    estudios TEXT NOT NULL,
+    experiencia TEXT NOT NULL,
+    certificaciones TEXT NOT NULL
+);
+
+INSERT INTO profesores (nombre, especialidad, descripcion, foto, correo, cursos_que_imparte, badge, estudios, experiencia, certificaciones) VALUES
+('Ing. María López', 'Python y Data Science', 'Ingeniera de datos con experiencia práctica.', './images/profesores/maria_lopez.jpg', 'maria.lopez@techforgeacademy.com', 'Python Básico, Data Science Avanzado', 'Python',
+ 'Ingeniería en Sistemas de Información, Universidad de Costa Rica.\nMaestría en Ciencia de Datos, Tecnológico de Costa Rica.',
+ '6 años como ingeniera de datos en banca y retail.\nLiderazgo de proyectos ETL y modelos predictivos en producción.\nMentora técnica en programas de inserción laboral junior.',
+ 'Google Data Analytics Professional Certificate.\nAWS Certified Cloud Practitioner.\nMicrosoft Azure Fundamentals (AZ-900).'),
+('Dr. Carlos Méndez', 'Inteligencia Artificial', 'Docente e investigador en ML.', './images/profesores/dr_carlos.jpg', 'carlos.mendez@techforgeacademy.com', 'Introducción a IA, Machine Learning Avanzado', 'IA',
+ 'Doctorado en Ciencias de la Computación, enfoque en IA aplicada.\nMaestría en Inteligencia Artificial y Analítica Avanzada.',
+ '10 años en investigación aplicada en visión por computador y NLP.\nConsultor en proyectos de IA para industria financiera y salud.\nDirector académico de programas de especialización en ML.',
+ 'TensorFlow Developer Certificate.\nDeepLearning.AI Machine Learning Specialization.\nIBM AI Engineering Professional Certificate.'),
+('Prof. Ana Rodríguez', 'Desarrollo Web Full Stack', 'Especialista en desarrollo web y UX.', './images/profesores/ana_rodriguez.jpg', 'ana.rodriguez@techforgeacademy.com', 'Desarrollo Web Full Stack, UX/UI Design', 'Programacion',
+ 'Bachillerato en Ingeniería de Software.\nEspecialización en UX/UI para productos digitales.',
+ '8 años construyendo plataformas web con equipos ágiles.\nLiderazgo técnico en frontend y arquitectura de componentes.\nMentoría de bootcamps full stack y proyectos capstone.',
+ 'Professional Scrum Master I (PSM I).\nMeta Front-End Developer Certificate.\nGoogle UX Design Certificate.'),
+('Mtro. Javier Vargas', 'DevOps y Control de Versiones', 'Experto en CI/CD y buenas prácticas.', './images/profesores/javier_vargas.jpg', 'javier.vargas@techforgeacademy.com', 'Git y GitHub, DevOps Fundamentals', 'DevOps',
+ 'Ingeniería en Computación.\nMaestría en Arquitectura de Software.',
+ '9 años en automatización CI/CD e infraestructura cloud.\nImplementación de pipelines y estándares de versionamiento empresarial.\nCapacitación de equipos en Git, branching strategy y release management.',
+ 'AWS Certified Developer - Associate.\nGitHub Actions Certification.\nDocker and Kubernetes Fundamentals.'),
+('Lic. Laura Fernández', 'Bases de Datos y SQL', 'Experta en diseño y optimización de bases de datos.', 'https://via.placeholder.com/400x300/1a2332/00d9ff?text=Laura+Fernandez', 'laura.fernandez@techforgeacademy.com', 'SQL Avanzado, Diseño de Bases de Datos', 'Bases de Datos',
+ 'Licenciatura en Ciencias de la Computación.\nEspecialización en Administración de Bases de Datos.',
+ '7 años como DBA en empresas de telecomunicaciones.\nOptimización de consultas y diseño de esquemas relacionales.\nCapacitación en modelado de datos y normalización.',
+ 'Oracle Certified Professional (OCP).\nMicrosoft SQL Server Certification.\nPostgreSQL Professional Certification.'),
+('Ing. Roberto Sánchez', 'Redes y Seguridad Informática', 'Especialista en infraestructura de redes y protocolos.', 'https://via.placeholder.com/400x300/1a2332/00d9ff?text=Roberto+Sanchez', 'roberto.sanchez@techforgeacademy.com', 'Redes de Computadoras, Seguridad en Redes', 'Redes',
+ 'Ingeniería en Telecomunicaciones.\nMaestría en Seguridad de la Información.',
+ '10 años en diseño e implementación de redes empresariales.\nAuditorías de seguridad y análisis de vulnerabilidades.\nConsultor en proyectos de infraestructura crítica.',
+ 'Cisco Certified Network Professional (CCNP).\nCertified Information Systems Security Professional (CISSP).\nCompTIA Security+.');

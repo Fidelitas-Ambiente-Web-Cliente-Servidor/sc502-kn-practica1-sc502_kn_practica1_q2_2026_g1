@@ -10,8 +10,11 @@ switch ($controller) {
         break;
 
     // case 'index': ...
-    // case 'profesores': ...
-    // case 'contacto': ...
+
+    case 'profesores':
+        require_once __DIR__ . '/controllers/ProfesoresController.php';
+        $obj = new ProfesoresController();
+        break;
 
     case 'contacto':
         require_once __DIR__ . '/controllers/ContactoController.php';

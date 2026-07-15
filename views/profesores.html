@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profesores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/cursos.css">
+    <link rel="stylesheet" href="./css/profesores.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="index.php?controller=index&action=index">
+                    <img src="./images/TechForge_logo.png" alt="Logo" class="logo">
+                </a>
+                <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="idindex">
+                            <a class="nav-link" href="index.php?controller=index&action=index">Index</a>
+                        </li>
+                        <li class="nav-item" id="idcursos">
+                            <a class="nav-link" href="index.php?controller=cursos&action=index">Cursos</a>
+                        </li>
+                        <li class="nav-item" id="idprofesores">
+                            <a class="nav-link active" href="index.php?controller=profesores&action=index">Profesores</a>
+                        </li>
+                        <li class="nav-item" id="idcontacto">
+                            <a class="nav-link" href="index.php?controller=contacto&action=index">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container text-center">
+            <h1 class="principal_text principal mt-4">Nuestro Equipo</h1>
+            <p class="principal_text">Conoce a los profesores que imparten nuestros cursos.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container text-center mt-4">
+            <div class="row">
+                <?php if (empty($profesores)): ?>
+                    <div class="col-12">
+                        <p class="principal_text">No hay profesores disponibles.</p>
+                    </div>
+                <?php else: ?>
+                    <?php foreach ($profesores as $profesor): ?>
+                        <div class="col">
+                            <div class="card prof-card" style="margin: 0 auto;">
+                                <span class="badge text-bg-primary"><?= htmlspecialchars($profesor['badge']) ?></span>
+                                <div class="card-body">
+                                    <img src="<?= htmlspecialchars($profesor['foto']) ?>" alt="<?= htmlspecialchars($profesor['nombre']) ?>" class="course-banner">
+                                    <h5 class="card-title"><?= htmlspecialchars($profesor['nombre']) ?></h5>
+                                    <p class="card-text">Especialidad: <?= htmlspecialchars($profesor['especialidad']) ?>. <?= htmlspecialchars($profesor['descripcion']) ?></p>
+                                    <div class="card-options">
+                                        <a href="index.php?controller=profesores&action=show&id=<?= $profesor['id'] ?>" class="btn btn-ver-prof">Ver profesor</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Misión</h3>
+                    <p>Formar profesionales competentes en tecnología con metodologías prácticas y aplicables.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Visión</h3>
+                    <p>Ser referentes en formación tecnológica, impulsando la innovación y la empleabilidad.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>© 2026 TechForge Academy</p>
+            <p>Síguenos en redes: Facebook | Instagram | LinkedIn</p>
+            <p>Desarrollado por el Grupo 1 - Cliente/Servidor - U.Fidelitas</p>
+        </div>
+    </footer>
+
+    <!-- JS de Tarea 2 comentado — se reactiva en Tarea 4 -->
+    <!-- <script src="./js/profesores.js"></script> -->
+</body>
+</html>
